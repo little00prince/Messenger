@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мессенджер — курсовой проект</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="wrap">
+    <h1>Мессенджер</h1>
+    <p class="hint">Личные сообщения между двумя пользователями</p>
+
+    <!-- Экран входа -->
+    <div id="login-screen" class="box">
+      <div class="tabs">
+        <button id="btn-tab-login" class="tab active">Вход</button>
+        <button id="btn-tab-register" class="tab">Регистрация</button>
+      </div>
+      <input id="input-user" type="text" placeholder="Имя пользователя">
+      <input id="input-pass" type="password" placeholder="Пароль">
+      <button id="btn-auth">Войти</button>
+      <p id="auth-msg" class="msg"></p>
+    </div>
+
+    <!-- Экран чата -->
+    <div id="chat-screen" class="box hidden">
+      <div class="top-bar">
+        <span>Вы: <b id="label-me"></b></span>
+        <button id="btn-logout">Выйти</button>
+      </div>
+
+      <div class="main">
+        <div class="users">
+          <h3>Пользователи</h3>
+          <ul id="user-list"></ul>
+        </div>
+
+        <div class="chat">
+          <h3 id="chat-title">Выберите собеседника</h3>
+          <div id="messages" class="messages"></div>
+          <div class="send-row">
+            <input id="input-msg" type="text" placeholder="Сообщение..." disabled>
+            <button id="btn-send" disabled>Отправить</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
